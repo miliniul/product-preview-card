@@ -1,0 +1,58 @@
+# macOS
+.DS_Store
+.localized
+.AppleDouble
+.LSOverride
+._*
+__MACOSX/
+
+# Установленные зависимости
+node_modules/
+
+# Результаты сборки
+/dist/
+/build/
+
+# Кэш инструментов
+.cache/
+.parcel-cache/
+.vite/
+.eslintcache
+.stylelintcache
+*.tsbuildinfo
+
+# Next.js
+.next/
+/out/
+
+# Nuxt
+.nuxt/
+.output/
+
+# Логи
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Переменные окружения и локальные секреты
+.env
+.env.*
+!.env.example
+
+# Результаты тестирования
+coverage/
+playwright-report/
+test-results/
+
+# Временные файлы редакторов
+*.swp
+*.swo
+*~
+
+# Личные настройки IDE
+.idea/
+
+# Локальная история VS Code
+.history/
