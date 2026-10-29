@@ -1,4 +1,118 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+}
 
+:root {
+    --color-black: hsl(212, 21%, 14%);
+    --color-grey: hsl(228, 12%, 48%);
+    --color-cream: hsl(30, 38%, 92%);
+    --color-white: hsl(0, 0%, 100%);
+    --color-green-500: hsl(158, 36%, 37%);
+    --color-green-700: hsl(158, 42%, 18%);
 
-.attribution { font-size: 0.6875rem; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+    --font-heading: 700 3.2rem "Fraunces";
+
+    --border-radius-main: 0.8rem;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body,
+.content,
+.title {
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100vh;
+
+    font-family: "Montserrat";
+    font-size: 1.4rem;
+
+    background-color: var(--color-cream);
+}
+
+main {
+    width: min(35rem, calc(100% - 2rem));
+    border-radius: var(--border-radius-main);
+
+    background-color: var(--color-white);
+}
+
+.product-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-main) var(--border-radius-main) 0 0;
+}
+
+.content,
+.title {
+    gap: 2.4rem;
+}
+
+.content {
+    padding: 3.2rem;
+}
+
+.product-type {
+    font-size: 1.2rem;
+    line-height: 1.2;
+    letter-spacing: 0.5rem;
+    color: var(--color-grey);
+}
+
+h1,
+.price-after {
+    font: var(--font-heading);
+}
+
+.product-description {
+    line-height: 1.6;
+    color: var(--color-grey);
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.price-after {
+    color: var(--color-green-500);
+}
+
+.price-before {
+    color: var(--color-grey);
+    text-decoration: line-through;
+}
+
+.add-btn {
+    padding: 1.6rem 3.2rem;
+    border: 0;
+    border-radius: 0.8rem;
+
+    font-size: inherit;
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--color-white);
+    background-color: var(--color-green-500);
+}
+
+.attribution {
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
