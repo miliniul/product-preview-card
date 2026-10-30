@@ -19,7 +19,12 @@
 
 <body>
   <main>
-    <img src="images/image-product-mobile.jpg" width="350" height="342" alt="" class="product-img">
+    <picture>
+      <source media="(max-width: 639px)" srcset="images/image-product-mobile.jpg">
+      <source media="(min-width: 640px)" srcset="images/image-product-desktop.jpg">
+      <img src="images/image-product-mobile.jpg" alt="" width="350" height="342" class="product-img" loading="lazy"
+        decoding="async">
+    </picture>
     <div class="content">
       <div class="title">
         <p class="product-type">PERFUME</p>
