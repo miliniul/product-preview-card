@@ -20,6 +20,11 @@ This is a solution to the [Product preview card component challenge on Frontend 
 
 ### The challenge
 
+Build a responsive product preview card that closely matches the provided mobile and desktop designs.
+
+The most challenging part was switching between the mobile and desktop product images and sizing the image correctly on larger screens. On tablet and desktop, the image needed to occupy half of the card's width and fill its entire height.
+
+I used the `<picture>` element with media-based sources to switch images at `640px`. For the larger-screen layout, I used CSS Grid with `grid-template-columns: 1fr 1fr` to divide the card into two equal columns. Setting the image to `width: 100%`, `height: 100%`, and `object-fit: cover` allowed it to fill its column while preserving its proportions and cropping when necessary.
 
 
 ### Screenshot
@@ -38,15 +43,38 @@ This is a solution to the [Product preview card component challenge on Frontend 
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
+- CSS Grid
 - Mobile-first workflow
 
 ### What I learned
 
+I learned how to use the `<picture>` element to display different images depending on the viewport width. Instead of resizing the same image for every screen, I used separate mobile and desktop versions to match the composition of each design.
 
+```html
+<picture>
+  <source
+    media="(min-width: 640px)"
+    srcset="images/image-product-desktop.jpg"
+  >
+  <img
+    src="images/image-product-mobile.jpg"
+    alt=""
+    width="350"
+    height="342"
+    class="product-img"
+  >
+</picture>
+```
+
+I also practiced combining CSS Grid with image sizing rules. Using `grid-template-columns: 1fr 1fr` gave the image and product details equal shares of the card's width. The image could then fill its column with `height: 100%` and `object-fit: cover`.
+
+This helped me understand the difference between defining the layout and controlling how an image fits inside it: Grid determines the available space, while `object-fit` controls how the image fills that space.
 
 ### Continued development
 
+My next step is to test how the two-column card handles longer product names and descriptions. I want to check whether the image continues to fill its half of the card as the text content makes the card taller.
 
+I will test the layout just below and above the `640px` breakpoint, as well as at `200%` browser zoom. I will check for horizontal scrolling, clipped text, and excessive image cropping. Based on the results, I will adjust the breakpoint or image positioning so the product remains clearly visible and the content stays readable.
 
 ### Useful resources
 
