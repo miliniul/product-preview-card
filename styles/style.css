@@ -101,7 +101,7 @@ h1,
 
 .add-btn {
     padding: 1.6rem 3.2rem;
-    border: 0;
+    border: none;
     border-radius: 0.8rem;
 
     font-size: inherit;
